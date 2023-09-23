@@ -13,7 +13,7 @@ Citizen.CreateThread(function()
         })
         if v.showblip == true then
             local ButcherBlip = Citizen.InvokeNative(0x554D9D53F696D002, 1664425300, v.coords)
-            SetBlipSprite(ButcherBlip, GetHashKey(Config.Blip.blipSprite), true)
+            SetBlipSprite(ButcherBlip, joaat(Config.Blip.blipSprite), true)
             SetBlipScale(ButcherBlip, Config.Blip.blipScale)
             Citizen.InvokeNative(0x9CB1A1623062F402, ButcherBlip, Config.Blip.blipName)
         end

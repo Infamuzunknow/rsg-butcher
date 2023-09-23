@@ -8,9 +8,9 @@ description 'rsg-butcher'
 shared_scripts {
     '@ox_lib/init.lua',
     '@rsg-core/shared/locale.lua',
-    'config.lua',
     'locales/en.lua',
     'locales/*.lua',
+    'config.lua',
 }
 
 client_scripts {
