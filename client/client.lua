@@ -128,13 +128,15 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        local ped = PlayerPedId()
-        local holding = Citizen.InvokeNative(0xD806CD2A4F2C2996, ped) -- GetFirstEntityPedIsCarrying
-        local model = GetEntityModel(holding)
-        for i = 1, #Config.Animal do
-            if holding ~= false then
-                if model == Config.Animal[i].model then
-                    TriggerServerEvent("RSGCore:Server:SetMetaData", "cleanliness", RSGCore.Functions.GetPlayerData().metadata["cleanliness"] - 5)
+        if Config.Cleanliness ~= false then
+            local ped = PlayerPedId()
+            local holding = Citizen.InvokeNative(0xD806CD2A4F2C2996, ped) -- GetFirstEntityPedIsCarrying
+            local model = GetEntityModel(holding)
+            for i = 1, #Config.Animal do
+                if holding ~= false then
+                    if model == Config.Animal[i].model then
+                        TriggerServerEvent("RSGCore:Server:SetMetaData", "cleanliness", RSGCore.Functions.GetPlayerData().metadata["cleanliness"] - 5)
+                    end
                 end
             end
         end
