@@ -7,6 +7,9 @@ Config.PoorMultiplier  = 1
 Config.GoodMultiplier  = 2
 Config.PerfectMultiplier  = 3
 
+--turn on reduce cleanliness
+Config.Cleanliness = false
+
 Config.Blip = {
     blipName = 'Butcher', -- Config.Blip.blipName
     blipSprite = 'blip_shop_butcher', -- Config.Blip.blipSprite
